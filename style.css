@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+:root{
+    --background-color: hsl(212, 45%, 89%);
+    --component-background:  hsl(0, 0%, 100%);
+    --text-color: hsl(220, 15%, 55%);
+    --heading-color:  hsl(218, 44%, 22%);
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: var(--background-color);
+    font-family: 'Outfit', sans-serif;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.4vw;
+    height: 75%;
+    width: 25%;
+    padding: 1.4vw;
+    background-color: var(--component-background);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.container .image-div{
+    height: 65%;
+    width: 100%;
+}
+
+.image-div img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.container h2, p{
+    text-align: center;
+}
+
+.container h2{
+    color: var(--heading-color);
+    width: 80%;
+}
+
+.container p{
+    font-size: 15px;
+    color: var(--text-color);
+    width: 80%;
+}
+
+@media (max-width: 376px) {
+    .container{
+        gap: 20px;
+        height: 80%;
+        width: 90%;
+        padding: 4vw 2vw;
+    }
+    
+    .container .image-div{
+        height: 60%;
+        width: 95%;
+    }
+}
